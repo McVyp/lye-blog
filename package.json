@@ -1,6 +1,8 @@
 {
   "name": "lye-blog",
   "type": "module",
+  "license": "UNLICENSED",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
