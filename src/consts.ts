@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'My personal website. -lye';
 export const SITE_DESCRIPTION = 'A journal of lye';
-export const HOMEPAGE_URL =  'https://www.lyejournal.com/';
+export const HOMEPAGE_URL =  'https://lye.vercel.app';
