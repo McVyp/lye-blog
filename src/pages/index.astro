@@ -37,9 +37,19 @@ const posts = (await Astro.glob('./posts/*.md')).sort((a: any, b: any) =>
 					</p>
 				</section>
 				<section>
-					<ul>{
+					<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					{
 					posts.map(post => (
-						<li><a>{post.frontmatter.title}</a></li>
+						<li class="text-center mb-4">
+							<a href={post.url}>
+								<div class="mt-3 text-xl">
+									{post.frontmatter.title}
+								</div>
+								<div class="opacity-70">
+									{post.frontmatter.description}
+								</div>
+							</a>
+						</li>
 					))
 					}
 					</ul>
