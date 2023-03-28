@@ -7,7 +7,12 @@ import Body from '../components/Body.astro';
 import Content from '../components/Content.astro';
 import { IoArrowForward } from 'react-icons/io5';
 import Masthead from '../components/Masthead.astro';
+
+const posts = (await Astro.glob('./posts/*.md')).sort((a: any, b: any) =>
+	new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+)
 ---
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +35,14 @@ import Masthead from '../components/Masthead.astro';
 							Learn more about Me<IoArrowForward className="inline" />
 						</a>
 					</p>
+				</section>
+				<section>
+					<ul>{
+					posts.map(post => (
+						<li><a>{post.frontmatter.title}</a></li>
+					))
+					}
+					</ul>
 				</section>
 			</Content>
 		</main>
