@@ -9,9 +9,11 @@ import { IoArrowForward } from 'react-icons/io5';
 import Masthead from '../components/Masthead.astro';
 import { Image } from '@astrojs/image/components';
 
+
 const posts = (await Astro.glob('./posts/*.md')).sort((a: any, b: any) =>
 	new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 )
+
 ---
 
 
