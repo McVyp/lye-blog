@@ -8,7 +8,6 @@ module.exports = {
 				mplus: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif']
 			}
 		},
-		
 	},
 	plugins: [],
 }
